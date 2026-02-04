@@ -11,3 +11,4 @@
 - [2026-01-31 11:23:22] fix: handle null check
 - [2026-02-01 17:46:15] feat: implement helper module
 - [2026-02-02 23:40:44] chore: remove unused imports
+- [2026-02-04 14:25:17] refactor: simplify conditionals

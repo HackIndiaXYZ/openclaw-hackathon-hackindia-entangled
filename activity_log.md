@@ -13,3 +13,4 @@
 - [2026-02-02 23:40:44] chore: remove unused imports
 - [2026-02-04 14:25:17] refactor: simplify conditionals
 - [2026-02-05 23:45:20] docs: update README
+- [2026-02-07 11:16:08] fix: correct off-by-one error

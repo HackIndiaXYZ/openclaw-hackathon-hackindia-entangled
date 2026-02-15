@@ -20,3 +20,4 @@
 - [2026-02-11 19:56:34] style: consistent naming conventions
 - [2026-02-12 21:41:21] test: extend test coverage
 - [2026-02-13 22:40:19] fix: patch race condition
+- [2026-02-15 09:07:59] feat: expose configuration options

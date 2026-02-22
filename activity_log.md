@@ -26,3 +26,4 @@
 - [2026-02-19 12:45:19] docs: add usage examples
 - [2026-02-20 16:07:15] fix: resolve type mismatch
 - [2026-02-21 10:21:01] feat: improve input validation
+- [2026-02-22 19:03:14] perf: reduce redundant API calls

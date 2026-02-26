@@ -29,3 +29,4 @@
 - [2026-02-22 19:03:14] perf: reduce redundant API calls
 - [2026-02-24 12:34:08] test: add integration tests
 - [2026-02-25 12:50:30] chore: bump version
+- [2026-02-26 14:27:26] fix: correct variable scope issue

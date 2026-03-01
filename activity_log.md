@@ -31,3 +31,4 @@
 - [2026-02-25 12:50:30] chore: bump version
 - [2026-02-26 14:27:26] fix: correct variable scope issue
 - [2026-02-27 14:51:55] refactor: clean up logic
+- [2026-03-01 10:28:51] fix: resolve edge case

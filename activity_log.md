@@ -36,3 +36,4 @@
 - [2026-03-03 16:13:55] chore: update dependencies
 - [2026-03-04 23:03:10] docs: improve inline comments
 - [2026-03-05 20:50:35] style: format code
+- [2026-03-07 09:37:30] perf: optimize loop

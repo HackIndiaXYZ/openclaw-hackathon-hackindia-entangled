@@ -37,3 +37,4 @@
 - [2026-03-04 23:03:10] docs: improve inline comments
 - [2026-03-05 20:50:35] style: format code
 - [2026-03-07 09:37:30] perf: optimize loop
+- [2026-03-08 22:11:04] test: add unit tests

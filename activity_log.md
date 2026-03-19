@@ -45,3 +45,4 @@
 - [2026-03-15 23:15:23] docs: update README
 - [2026-03-16 22:35:19] fix: correct off-by-one error
 - [2026-03-18 12:45:21] feat: add error handling
+- [2026-03-19 19:40:54] chore: reorganize file structure

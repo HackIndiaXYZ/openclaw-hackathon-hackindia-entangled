@@ -47,3 +47,4 @@
 - [2026-03-18 12:45:21] feat: add error handling
 - [2026-03-19 19:40:54] chore: reorganize file structure
 - [2026-03-20 23:58:54] perf: cache repeated computation
+- [2026-03-22 20:27:35] style: consistent naming conventions

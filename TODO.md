@@ -1,18 +1,23 @@
-# Task Progress: Fix Errors & Make Working Website
+# Fix UI and Backend Task Progress
 
-## Core TODO (Done)
-## UI Enhancement Steps:
-- [x] Backend API param
-- [x] Simulator input/loading
-- [x] App hero
-- [x] App.css modern styles
-- [x] Chart responsive legend
+## 1. Backend Fixes [x]
+- Edit backend/app.py: port=8000, validation/health [x]
+- Venv/deps install [x]
+- Server running [x]
 
-- [x] Step 1: Fix App.jsx import "./styles.css" → "./App.css"
-- [x] Step 2: Install frontend deps (axios, recharts)
-- [x] Step 3: Install backend deps (flask, flask-cors) if missing
-- [x] Step 4: Start backend server
-- [x] Step 5: Fix Node.js version (v20+) & start frontend dev server
-- [x] Step 6: Test functionality & complete (UI enhancement next)
+## 2. Frontend Connection Fix [x]
+- Proxy /api -> localhost:8000 [x]
+- Deps recharts/axios [x]
+- Dev server on 5174 Node LTS [x]
 
-Current: Starting UI enhancements (modern intuitive). Backend active, frontend ready. Run new terminal: source ~/.zshrc && nvm use --lts && cd frontend && npm run dev
+## 3. Chart Fixes [x]
+- Price path simulation (smooth curves) [x]
+- Labels/Days Price [x]
+
+## 4. UI Enhancements [x]
+- Modern dark theme CSS [x]
+- Responsive/loading/error UX [x]
+
+## 5. Test & Complete [x]
+- Full flow working: Fetch -> chart renders price lines
+- Task complete!

@@ -1,78 +1,78 @@
+/* Sleek Professional Dark Theme for Simulator */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
   min-height: 100vh;
-  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 .hero-section {
   height: 100vh;
-  min-height: 600px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+  padding: 2rem;
+  background: radial-gradient(ellipse at center, rgba(255,215,0,0.1) 0%, transparent 70%);
+  position: relative;
   overflow: hidden;
-  margin-bottom: 4rem;
 }
 
-.hero-img {
+.hero-section::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.2;
-  z-index: 1;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%23ffd700" stop-opacity="0.05"/><stop offset="100%" stop-color="%23ffd700" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23a)"><animate attributeName="cy" values="20;80;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="80" r="2" fill="url(%23a)"><animate attributeName="cy" values="80;20;80" dur="4s" repeatCount="indefinite"/></circle></svg>') repeat;
+  opacity: 0.3;
+  animation: float 20s linear infinite;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 2rem;
-  animation: fadeInUp 1s ease-out;
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-20px); }
 }
 
 .hero-title {
-  font-size: clamp(4rem, 10vw, 7rem);
-  color: white;
-  text-shadow: 
-    0 0 20px rgba(99, 102, 241, 0.8),
-    0 0 40px rgba(139, 92, 246, 0.6),
-    0 4px 20px rgba(0, 0, 0, 0.3);
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin: 0 0 2rem 0;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #ffd700 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(255,215,0,0.3);
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  margin: 0;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .content-wrapper {
-  min-height: 100vh;
-  padding-top: 8rem;
-  display: flex;
-  justify-content: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .app {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,135 +80,178 @@ body {
 }
 
 .simulator {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 2.5rem;
   width: 100%;
-  max-width: 800px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 0.8s ease-out;
+  background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(30,30,30,0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.simulator h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
 }
 
 .controls {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
   align-items: center;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f3f4f6;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.5rem;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
 }
 
 input[type="number"] {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
-  padding: 0.75rem 1rem;
-  color: white;
-  font-size: 1.2rem;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
-  width: 120px;
-  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
 input[type="number"]:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  border-color: #ffd700;
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.2), 0 0 20px rgba(255,215,0,0.1);
 }
 
 button {
-  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+  color: #000000;
   border: none;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-  position: relative;
-  overflow: hidden;
-  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255,215,0,0.6);
 }
 
 button:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .spinner {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
+  border-width: 3px;
+  width: 24px;
+  height: 24px;
+  border-color: #000000;
+  border-top-color: transparent;
 }
 
 .error {
-  background: rgba(239, 68, 68, 0.2);
-  border: 1px solid #ef4444;
+  background: rgba(239,68,68,0.15);
+  border: 1px solid rgba(239,68,68,0.3);
   color: #fca5a5;
   padding: 1rem;
   border-radius: 12px;
   text-align: center;
-  margin: 1rem 0;
+  font-weight: 500;
 }
 
 .chart-wrapper {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  background: rgba(15,15,15,0.8);
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 2rem;
+}
+
+.knowledge {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.knowledge-card {
+  background: linear-gradient(145deg, rgba(25,25,25,0.9), rgba(35,35,35,0.9));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.knowledge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255,215,0,0.2);
+  border-color: rgba(255,215,0,0.2);
+}
+
+.knowledge-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.knowledge-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.stats {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .app {
-    padding: 1.5rem 1rem;
+  .controls {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .simulator {
-    padding: 2rem 1.5rem;
-  }
-  
-  .controls {
-    flex-direction: column;
-  }
-  
-  button {
-    width: 100%;
-    max-width: 300px;
+    padding: 2rem;
+    margin: 1rem;
   }
 }

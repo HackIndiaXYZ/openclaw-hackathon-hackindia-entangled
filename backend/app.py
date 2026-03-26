@@ -7,9 +7,18 @@ CORS(app)
 
 @app.route("/simulate")
 def simulate():
-    n = int(request.args.get('n', 200))
+    try:
+        n = int(request.args.get('n', 200))
+        if n < 50 or n > 10000:
+            return jsonify({"error": "Number of simulations must be between 50 and 10000"}), 400
+    except ValueError:
+        return jsonify({"error": "Invalid number of simulations"}), 400
     data = monte_carlo(n)
     return jsonify(data)
 
+@app.route("/health")
+def health():
+    return jsonify({"status": "healthy", "endpoint": "/simulate"})
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)

@@ -8,7 +8,7 @@ Button click → Backend runs 1000 simulations → Frontend plots top 10 paths �
 
 ## 🎯 Live Demo
 ```
-Frontend: http://localhost:5174 (vite)
+Frontend: http://localhost:5173/ (vite)
 Backend: http://localhost:8000 (flask)
 ```
 Click **\"Run Simulation\"** → Charts appear instantly.
@@ -72,7 +72,7 @@ XAxis: Steps | YAxis: State (0/1)
 ## 🔍 Run Locally
 1. **Backend:** `cd backend && python3 app.py`
 2. **Frontend:** `cd frontend && npm run dev`
-3. **Open:** http://localhost:5174
+3. **Open:** http://localhost:5173/
 4. **Test:** Click button → Chart loads!
 
 ## 🚀 Deploy (Optional)

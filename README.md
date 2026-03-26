@@ -1,64 +1,87 @@
 # 📈 Entangled Market Simulator
 **HackIndia OpenClaw Hackathon | Team Entangled**
 
-Markov Chain + Monte Carlo simulation dashboard. Visualize multiple market path forecasts in real-time.
+Interactive dashboard using **Markov Chain Monte Carlo** to simulate market paths. See 1000+ possible futures!
 
-## 🚀 Features
-- 🔄 Backend: Flask API (Markov transition matrix UP/DOWN)
-- 📊 Frontend: React + Recharts (interactive line charts)
-- ⚡ Real-time sims (1000 runs, sliced top 10)
-- 🎨 Glassmorphism UI, responsive design
-- 🛠 Vite + Node 20 LTS
+## ✨ What it does
+Button click → Backend runs 1000 simulations → Frontend plots top 10 paths → **Visualize uncertainty!**
 
-## 🛫 Quick Start
+## 🎯 Live Demo
+```
+Frontend: localhost:5173 (vite)
+Backend: localhost:5000 (flask)
+```
+Click **\"Run Simulation\"** → Charts appear instantly.
+
+## 🚀 Setup (2 minutes)
 ```bash
-# Terminal 1: Backend
+# 1. Backend API
 cd backend
-python3 app.py  # http://127.0.0.1:5000
+pip3 install flask flask-cors  # Already done
+python3 app.py
 
-# Terminal 2: Frontend
+# 2. Frontend (New Terminal)
 cd frontend
-npm run dev     # http://localhost:5173
+npm install
+npm run dev
 ```
 
-**Click "Run Simulation" → Watch paths emerge!**
-
-## 🏗 Architecture
+## 🧠 How Markov Works
 ```
-backend/           Flask + Markov Monte Carlo
-├── app.py        CORS API /simulate
-└── simulation.py Generators
+Transition Matrix:
+UP (0) → 70% UP, 30% DOWN
+DOWN (1) → 40% UP, 60% DOWN
 
-frontend/         React + Vite + Recharts
-├── App.jsx       Market dashboard
-├── Simulator.jsx Button + axios fetch
-└── Chart.jsx     Multi-line paths
+monte_carlo(1000) → Array[1000][31 steps]
 ```
 
-## 🔧 Prerequisites
-- Node.js 20 LTS+ (`nvm use --lts`)
-- Python 3.8+
+**Backend:** `simulation.py` generates paths  
+**Frontend:** `Simulator.jsx` fetches → `Chart.jsx` Recharts lines
 
-## 📁 Files
-| Path | Description |
-|------|-------------|
-| `backend/app.py` | Flask server |
-| `frontend/src/App.jsx` | Main UI |
-| `frontend/src/components/` | Sim + Chart |
-| `TODO.md` | Completion log |
-
-## 🤝 Contributing
+## 📱 UI Flow
 ```
-git checkout main
-git pull origin main
-# make changes
-git add .
-git commit -m "feat: description"
-git push origin main
+Hero title → Run button → 
+Loading → Multi-line chart (10 sims)
+XAxis: Steps | YAxis: State (0/1)
 ```
 
-## 🎯 Demo
-![Demo Chart](frontend/src/assets/hero.png)
-**Live:** localhost:5173 → Run sims!
+## 🛠 Tech Stack
+| Component | Tech |
+|-----------|------|
+| Backend | Flask 3.0, Python 3.8 |
+| Frontend | React 18, Vite 5, Recharts 2 |
+| State | Axios API, useState |
+| Styling | CSS Modules, Glassmorphism |
 
-**HackIndia 2024 | Built with ❤️ for OpenClaw**
+## 📁 Project Structure
+```
+.
+├── backend/
+│   ├── app.py (CORS API)
+│   └── simulation.py (Monte Carlo)
+├── frontend/
+│   ├── src/App.jsx (Layout)
+│   ├── components/
+│   │   ├── Simulator.jsx (Button/API)
+│   │   └── Chart.jsx (Recharts)
+│   └── assets/hero.png (Demo)
+├── README.md
+└── TODO.md (Progress)
+```
+
+## 🔍 Run Locally
+1. **Backend:** `cd backend && python3 app.py`
+2. **Frontend:** `cd frontend && npm run dev`
+3. **Open:** http://localhost:5173
+4. **Test:** Click button → Chart loads!
+
+## 🚀 Deploy (Optional)
+```
+Frontend: Vercel/Netlify (vite build)
+Backend: Render/Railway (Flask)
+```
+
+## 🤝 Team
+**HackIndia 2024 | OpenClaw Track**
+
+**Made with ❤️ for predictive markets!**

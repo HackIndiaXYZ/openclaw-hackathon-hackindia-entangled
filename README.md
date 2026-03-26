@@ -58,6 +58,7 @@ git push origin main
 ```
 
 ## 🎯 Demo
-![Market Sims](frontend/src/assets/hero.png)
+![Demo Chart](frontend/src/assets/hero.png)
+**Live:** localhost:5173 → Run sims!
 
 **HackIndia 2024 | Built with ❤️ for OpenClaw**

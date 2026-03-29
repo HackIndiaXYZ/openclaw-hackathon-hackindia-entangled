@@ -2,71 +2,66 @@
 
 **HackIndia OpenClaw Hackathon | Team Entangled**
 
-Interactive dashboard using **Markov Chain Monte Carlo** to simulate market paths. See 1000+ possible futures!
+Interactive dashboard using **Markov Chain Monte Carlo (MCMC)** to simulate market paths and visualize uncertainty in predictive markets.
 
 ---
 
 ## 🎥 Demo Video
 
-[▶️ Watch Simulation](./Simulation.mov)
+<video src="Simulation.mp4" controls width="700"></video>
 
 ---
 
-## ✨ What it does
+## ✨ Features
 
-Button click → Backend runs 1000 simulations → Frontend plots top 10 paths → **Visualize uncertainty!**
-
----
-
-## 🚀 Setup (2 minutes)
-
-```bash
-# 1. Backend API
-cd backend
-pip3 install flask flask-cors
-python3 app.py
-
-# 2. Frontend (New Terminal)
-cd frontend
-npm install
-npm run dev
-```
+* ⚡ Run **1000+ Monte Carlo simulations** instantly
+* 📊 Visualize **top 10 probable market paths**
+* 🔄 Real-time interaction with backend API
+* 🎯 Clean UI with smooth transitions & glassmorphism
 
 ---
 
-## 🧠 How Markov Works
+## 🧠 How It Works
+
+We model market movement using a **Markov Chain**:
 
 ```
+States:
+0 → DOWN
+1 → UP
+
 Transition Matrix:
-UP (0) → 70% UP, 30% DOWN
-DOWN (1) → 40% UP, 60% DOWN
+UP (1)   → 70% UP, 30% DOWN  
+DOWN (0) → 40% UP, 60% DOWN  
 
-monte_carlo(1000) → Array[1000][31 steps]
+monte_carlo(1000) → 1000 simulated paths (31 steps each)
 ```
 
-**Backend:** `simulation.py` generates paths
-**Frontend:** `Simulator.jsx` fetches → `Chart.jsx` Recharts lines
+* **Backend:** Generates stochastic paths
+* **Frontend:** Renders multi-line chart using Recharts
 
 ---
 
 ## 📱 UI Flow
 
 ```
-Hero title → Run button → 
-Loading → Multi-line chart (10 sims)
-XAxis: Steps | YAxis: State (0/1)
+Hero Section → Run Simulation Button → Loading → Multi-line Chart
 ```
+
+* X-Axis → Time Steps
+* Y-Axis → Market State (0/1)
 
 ---
 
 ## 🛠 Tech Stack
 
-| Component | Tech                         |
-| --------- | ---------------------------- |
-| Backend   | Flask 3.0, Python 3.8        |
-| Frontend  | React 18, Vite 5, Recharts 2 |
-| State     | Axios API, useState          |
-| Styling   | CSS Modules, Glassmorphism   |
+| Component | Tech                           |
+| --------- | ------------------------------ |
+| Backend   | Flask 3.0, Python              |
+| Frontend  | React 18, Vite 5               |
+| Charts    | Recharts                       |
+| API Calls | Axios                          |
+| Styling   | CSS Modules (Glassmorphism UI) |
 
 ---
 
@@ -75,37 +70,69 @@ XAxis: Steps | YAxis: State (0/1)
 ```
 .
 ├── backend/
-│   ├── app.py (CORS API)
-│   └── simulation.py (Monte Carlo)
+│   ├── app.py            # Flask API
+│   └── simulation.py     # Monte Carlo logic
 ├── frontend/
-│   ├── src/App.jsx (Layout)
+│   ├── src/App.jsx
 │   ├── components/
-│   │   ├── Simulator.jsx (Button/API)
-│   │   └── Chart.jsx (Recharts)
-│   └── assets/hero.png (Demo)
+│   │   ├── Simulator.jsx
+│   │   └── Chart.jsx
+│   └── assets/
+├── Simulation.mp4        # Demo video
 ├── README.md
-└── TODO.md (Progress)
+└── TODO.md
 ```
 
 ---
 
-## 🔍 Run Locally
+## 🚀 Run Locally
 
-1. **Backend:** `cd backend && python3 app.py`
-2. **Frontend:** `cd frontend && npm run dev`
-3. **Open:** http://localhost:5173/
-4. **Test:** Click button → Chart loads!
+### 1️⃣ Backend
+
+```bash
+cd backend
+pip3 install flask flask-cors
+python3 app.py
+```
+
+### 2️⃣ Frontend (new terminal)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 3️⃣ Open App
+
+```
+http://localhost:5173/
+```
+
+👉 Click **Run Simulation** → Chart loads instantly
 
 ---
 
-## ✅ Latest Status (Updated by BLACKBOXAI - 2024)
+## 🌐 Deployment
 
-- **Fully Running:** Backend http://localhost:8000, Frontend http://localhost:5173/
-- **Fixes Applied:** Vite dev server (Node v24+), deps updated, backend 500 error resolved
-- **Tested:** Multiple /simulate?n=XXX requests 200 OK (up to 1000 sims)
-- **Ready for Demo:** Click 'Run Simulation' for live Monte Carlo charts
-- **Deploy:** Vercel frontend via vercel.json (backend needs Railway/Render)
+| Service          | Usage                 |
+| ---------------- | --------------------- |
+| Vercel / Netlify | Frontend (Vite build) |
+| Render / Railway | Backend (Flask API)   |
+
+---
+
+## 🚀 Future Improvements
+
+* 📈 Real market data integration
+* 🧠 Advanced probabilistic models (HMM, Bayesian inference)
+* 📊 More chart types & analytics
+* ☁️ Full cloud deployment
+
+---
+
+## 🤝 Team
 
 **HackIndia 2024 | OpenClaw Track**
 
-**Made with ❤️ for predictive markets!**
+Built with ❤️ for **predictive markets & probabilistic modeling**

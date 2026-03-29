@@ -9,6 +9,13 @@ Interactive dashboard using **Markov Chain Monte Carlo (MCMC)** to simulate mark
 
 ## 🎥 Demo Video
 
+This video demonstrates the working of the **Entangled Market Simulator**:
+
+- Running Monte Carlo simulations (200+ paths)
+- Backend generating stochastic market paths
+- Frontend visualizing top simulation results
+- Interactive UI with real-time chart updates
+
 [![Watch Demo](./preview.png)](./Simulation.mp4)
 
 🔗 **Direct Link:** [Open Video](./Simulation.mp4)

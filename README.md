@@ -4,8 +4,18 @@
 
 Interactive dashboard using **Markov Chain Monte Carlo (MCMC)** to simulate market paths and visualize uncertainty in predictive markets.
 
----
+## ❗ Problem Statement
 
+Traditional market analysis often relies on single deterministic predictions, which fail to capture uncertainty and multiple possible futures.
+
+## 💡 Our Solution
+
+We use **Markov Chain Monte Carlo simulations** to generate multiple possible market paths, allowing users to:
+- Understand uncertainty
+- Visualize probabilistic outcomes
+- Make better-informed decisions
+
+---
 
 ## 🎥 Demo Video
 

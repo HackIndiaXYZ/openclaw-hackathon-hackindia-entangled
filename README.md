@@ -96,11 +96,15 @@ XAxis: Steps | YAxis: State (0/1)
 3. **Open:** http://localhost:5173/
 4. **Test:** Click button → Chart loads!
 
-
-
 ---
 
-## 🤝 Team
+## ✅ Latest Status (Updated by BLACKBOXAI - 2024)
+
+- **Fully Running:** Backend http://localhost:8000, Frontend http://localhost:5173/
+- **Fixes Applied:** Vite dev server (Node v24+), deps updated, backend 500 error resolved
+- **Tested:** Multiple /simulate?n=XXX requests 200 OK (up to 1000 sims)
+- **Ready for Demo:** Click 'Run Simulation' for live Monte Carlo charts
+- **Deploy:** Vercel frontend via vercel.json (backend needs Railway/Render)
 
 **HackIndia 2024 | OpenClaw Track**
 

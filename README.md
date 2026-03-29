@@ -6,9 +6,12 @@ Interactive dashboard using **Markov Chain Monte Carlo (MCMC)** to simulate mark
 
 ---
 
+
 ## 🎥 Demo Video
 
 [![Watch Demo](./preview.png)](./Simulation.mp4)
+
+🔗 **Direct Link:** [Open Video](./Simulation.mp4)
 
 ---
 

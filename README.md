@@ -6,10 +6,9 @@ Interactive dashboard using **Markov Chain Monte Carlo (MCMC)** to simulate mark
 
 ---
 
-
 ## 🎥 Demo Video
 
-[▶️ Watch Demo](./Simulation.mp4)
+[![Watch Demo](./preview.png)](./Simulation.mp4)
 
 ---
 
@@ -28,8 +27,8 @@ We model market movement using a **Markov Chain**:
 
 ```
 States:
-0 → DOWN
-1 → UP
+0 → DOWN  
+1 → UP  
 
 Transition Matrix:
 UP (1)   → 70% UP, 30% DOWN  
@@ -38,8 +37,8 @@ DOWN (0) → 40% UP, 60% DOWN
 monte_carlo(1000) → 1000 simulated paths (31 steps each)
 ```
 
-* **Backend:** Generates stochastic paths
-* **Frontend:** Renders multi-line chart using Recharts
+* **Backend:** `simulation.py` generates stochastic paths
+* **Frontend:** `Simulator.jsx` fetches → `Chart.jsx` renders
 
 ---
 
@@ -58,8 +57,8 @@ Hero Section → Run Simulation Button → Loading → Multi-line Chart
 
 | Component | Tech                           |
 | --------- | ------------------------------ |
-| Backend   | Flask 3.0, Python              |
-| Frontend  | React 18, Vite 5               |
+| Backend   | Flask, Python                  |
+| Frontend  | React, Vite                    |
 | Charts    | Recharts                       |
 | API Calls | Axios                          |
 | Styling   | CSS Modules (Glassmorphism UI) |
@@ -71,15 +70,15 @@ Hero Section → Run Simulation Button → Loading → Multi-line Chart
 ```
 .
 ├── backend/
-│   ├── app.py            # Flask API
-│   └── simulation.py     # Monte Carlo logic
+│   ├── app.py
+│   └── simulation.py
 ├── frontend/
 │   ├── src/App.jsx
 │   ├── components/
 │   │   ├── Simulator.jsx
 │   │   └── Chart.jsx
-│   └── assets/
-├── Simulation.mp4        # Demo video
+├── Simulation.mp4
+├── preview.png
 ├── README.md
 └── TODO.md
 ```
@@ -116,18 +115,18 @@ http://localhost:5173/
 
 ## 🌐 Deployment
 
-| Service          | Usage                 |
-| ---------------- | --------------------- |
-| Vercel / Netlify | Frontend (Vite build) |
-| Render / Railway | Backend (Flask API)   |
+| Service          | Usage    |
+| ---------------- | -------- |
+| Vercel / Netlify | Frontend |
+| Render / Railway | Backend  |
 
 ---
 
 ## 🚀 Future Improvements
 
 * 📈 Real market data integration
-* 🧠 Advanced probabilistic models (HMM, Bayesian inference)
-* 📊 More chart types & analytics
+* 🧠 Advanced probabilistic models
+* 📊 More analytics & charts
 * ☁️ Full cloud deployment
 
 ---

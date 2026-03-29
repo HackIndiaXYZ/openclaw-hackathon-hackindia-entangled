@@ -18,7 +18,7 @@ This video demonstrates the working of the **Entangled Market Simulator**:
 
 [![Watch Demo](./preview.png)](./Simulation.mp4)
 
-🔗 **Direct Link:** [Open Video](./Simulation.mp4)
+🔗 **Direct Link:** [Open Video](https://drive.google.com/file/d/1CYkimLaRSq57tN1DF6GSja0p-JUt_BrP/view?usp=sharing)
 
 ---
 

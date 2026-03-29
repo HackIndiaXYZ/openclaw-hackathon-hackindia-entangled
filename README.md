@@ -24,10 +24,11 @@ This video demonstrates the working of the **Entangled Market Simulator**:
 
 ## ✨ Features
 
-* ⚡ Run **1000+ Monte Carlo simulations** instantly
-* 📊 Visualize **top 10 probable market paths**
-* 🔄 Real-time interaction with backend API
-* 🎯 Clean UI with smooth transitions & glassmorphism
+- ⚡ Run **Monte Carlo simulations (50 → 1000 runs)**  
+- 📊 Visualize **top 10 probable market paths**  
+- 🎛 Adjustable simulation range for experimentation  
+- 🔄 Real-time interaction with backend API  
+- 🎯 Clean UI with smooth transitions & glassmorphism  
 
 ---
 

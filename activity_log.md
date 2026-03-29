@@ -52,3 +52,4 @@
 - [2026-03-25 09:19:23] fix: patch race condition
 - [2026-03-26 23:22:13] feat: expose configuration options
 - [2026-03-28 22:10:51] chore: lint and format pass
+- [2026-03-29 23:26:01] refactor: extract shared utils

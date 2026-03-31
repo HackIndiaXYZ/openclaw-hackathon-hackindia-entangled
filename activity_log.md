@@ -54,3 +54,4 @@
 - [2026-03-28 22:10:51] chore: lint and format pass
 - [2026-03-29 23:26:01] refactor: extract shared utils
 - [2026-03-30 21:59:26] docs: add usage examples
+- [2026-03-31 11:50:44] fix: resolve type mismatch

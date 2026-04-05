@@ -58,3 +58,4 @@
 - [2026-04-02 12:01:42] feat: improve input validation
 - [2026-04-03 17:25:43] perf: reduce redundant API calls
 - [2026-04-04 13:02:06] test: add integration tests
+- [2026-04-05 14:46:50] chore: bump version

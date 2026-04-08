@@ -60,3 +60,4 @@
 - [2026-04-04 13:02:06] test: add integration tests
 - [2026-04-05 14:46:50] chore: bump version
 - [2026-04-06 15:00:33] fix: correct variable scope issue
+- [2026-04-08 17:19:42] refactor: clean up logic

@@ -62,3 +62,4 @@
 - [2026-04-06 15:00:33] fix: correct variable scope issue
 - [2026-04-08 17:19:42] refactor: clean up logic
 - [2026-04-09 12:26:42] fix: resolve edge case
+- [2026-04-10 11:39:36] feat: add new utility function

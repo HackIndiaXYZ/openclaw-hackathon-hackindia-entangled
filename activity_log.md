@@ -64,3 +64,4 @@
 - [2026-04-09 12:26:42] fix: resolve edge case
 - [2026-04-10 11:39:36] feat: add new utility function
 - [2026-04-11 13:18:13] chore: update dependencies
+- [2026-04-12 16:50:57] docs: improve inline comments
